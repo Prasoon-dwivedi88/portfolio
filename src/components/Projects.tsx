@@ -66,7 +66,7 @@ const Projects = () => {
       description:
         "A full-stack healthcare platform featuring complex patient registration, appointment scheduling, a secure passkey-protected admin dashboard, and automated SMS notifications.",
       image:
-        "https://images.unsplash.com/photo-1576091160550-2173ff9e5952?w=600&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
       technologies: ["Next.js", "TypeScript", "Appwrite", "Tailwind CSS", "Zod", "Twilio"],
       features: [
         "Complex patient onboarding workflows",
