@@ -1,13 +1,43 @@
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
-import { Code2, Database, Smartphone, Globe } from 'lucide-react';
+//import { Code2, Database, Smartphone, Globe } from 'lucide-react';
+//import { Cpu, Code2, LineChart, Wrench } from 'lucide-react';
+import { Code2, Database, Globe, Terminal } from 'lucide-react';
 
 const About = () => {
+  // const skills = [
+  //   { category: 'Frontend', icon: <Globe className="w-6 h-6" />, techs: ['React', 'TypeScript', 'Next.js', 'Vue.js', 'Tailwind CSS', 'Three.js'] },
+  //   { category: 'Backend', icon: <Database className="w-6 h-6" />, techs: ['Node.js', 'Express', 'Python', 'PostgreSQL', 'MongoDB', 'Redis'] },
+  //   { category: 'Mobile', icon: <Smartphone className="w-6 h-6" />, techs: ['React Native', 'Flutter', 'iOS', 'Android'] },
+  //   { category: 'DevOps', icon: <Code2 className="w-6 h-6" />, techs: ['Docker', 'AWS', 'CI/CD', 'Kubernetes', 'Git'] },
+  // ];
+  // const skills = [
+  //   { category: 'Embedded Systems', icon: <Cpu className="w-6 h-6" />, techs: ['AVR Microcontrollers', 'Intel 8051', 'Assembly', 'Timer/Interrupt Logic'] },
+  //   { category: 'Software & Algorithms', icon: <Code2 className="w-6 h-6" />, techs: ['Java', 'Data Structures', 'Competitive Programming', 'System Architecture'] },
+  //   { category: 'Simulation & Modeling', icon: <LineChart className="w-6 h-6" />, techs: ['MATLAB', 'Root Locus', 'Time-Domain Simulation', 'Circuit Modeling'] },
+  //   { category: 'Tools & Languages', icon: <Wrench className="w-6 h-6" />, techs: ['Git', 'C/C++', 'French (Conversational)', 'Presentation'] },
+  // ];
   const skills = [
-    { category: 'Frontend', icon: <Globe className="w-6 h-6" />, techs: ['React', 'TypeScript', 'Next.js', 'Vue.js', 'Tailwind CSS', 'Three.js'] },
-    { category: 'Backend', icon: <Database className="w-6 h-6" />, techs: ['Node.js', 'Express', 'Python', 'PostgreSQL', 'MongoDB', 'Redis'] },
-    { category: 'Mobile', icon: <Smartphone className="w-6 h-6" />, techs: ['React Native', 'Flutter', 'iOS', 'Android'] },
-    { category: 'DevOps', icon: <Code2 className="w-6 h-6" />, techs: ['Docker', 'AWS', 'CI/CD', 'Kubernetes', 'Git'] },
+    { 
+      category: 'Core & Algorithms', 
+      icon: <Terminal className="w-6 h-6" />, 
+      techs: ['Java', 'Data Structures', 'Competitive Programming', 'Codeforces', 'Leetcode'] 
+    },
+    { 
+      category: 'Full Stack', 
+      icon: <Globe className="w-6 h-6" />, 
+      techs: ['HTML5','React', 'TypeScript', 'Node.js', 'Express', 'Tailwind CSS', 'Next.js','Redux'] 
+    },
+    { 
+      category: 'Database & Architecture', 
+      icon: <Database className="w-6 h-6" />, 
+      techs: ['PostgreSQL', 'MongoDB', 'REST APIs'] 
+    },
+    { 
+      category: 'Tools & Misc', 
+      icon: <Code2 className="w-6 h-6" />, 
+      techs: ['Git', 'GitHub','Postman', 'Software Management Systems', 'French (Conversational)'] 
+    },
   ];
 
   return (
@@ -16,8 +46,7 @@ const About = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">About Me</h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            I'm a passionate full stack developer with 5+ years of experience building scalable web applications. 
-            I love turning complex problems into simple, beautiful, and intuitive solutions.
+            I'm a passionate software developer and competitive programmer with a strong foundation in algorithmic problem-solving. I love turning complex logic into clean, efficient, and scalable software solutions.
           </p>
         </div>
 
@@ -25,14 +54,10 @@ const About = () => {
           <div className="space-y-6">
             <h3 className="text-3xl font-bold text-slate-900 mb-6">My Journey</h3>
             <p className="text-slate-600 leading-relaxed">
-              Started my journey as a frontend developer and gradually expanded into full stack development. 
-              I've worked with startups and established companies, building everything from MVP products to 
-              enterprise-level applications serving millions of users.
+              Started my journey exploring core programming principles and quickly developed a deep passion for software architecture and algorithms. I've built comprehensive software platforms, including a full-stack patient management and therapy scheduling system for a competitive hackathon.
             </p>
             <p className="text-slate-600 leading-relaxed">
-              I'm particularly passionate about creating performant, accessible, and user-friendly applications 
-              that solve real-world problems. When I'm not coding, you can find me contributing to open source 
-              projects or learning about emerging technologies.
+             I am particularly passionate about writing clean, optimized Java code and solving complex algorithmic challenges on platforms like Codeforces. When I'm not pushing my rating or building scalable applications, you can find me practicing my French and diving into emerging web technologies.
             </p>
           </div>
           
@@ -42,16 +67,16 @@ const About = () => {
                 <h4 className="text-xl font-bold text-slate-900 mb-4">Quick Stats</h4>
                 <div className="space-y-3">
                   <div className="flex justify-between">
-                    <span className="text-slate-600">Projects Completed</span>
-                    <span className="font-bold text-slate-900">50+</span>
+                    <span className="text-slate-600">Projects & Hackathons</span>
+                    <span className="font-bold text-slate-900">10+</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-slate-600">Years Experience</span>
-                    <span className="font-bold text-slate-900">5+</span>
+                    <span className="text-slate-600">Technologies & Tools</span>
+                    <span className="font-bold text-slate-900">15+</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-slate-600">Technologies Mastered</span>
-                    <span className="font-bold text-slate-900">20+</span>
+                    <span className="text-slate-600">Codeforces Submissions</span>
+                    <span className="font-bold text-slate-900">200+</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-slate-600">Coffee Cups</span>

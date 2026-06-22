@@ -61,7 +61,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Connect</h4>
             <div className="flex space-x-4">
               <a 
-                href="https://github.com" 
+                href="https://github.com/Prasoon-dwivedi88" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-white transition-colors duration-300 transform hover:scale-110"
@@ -69,19 +69,19 @@ const Footer = () => {
                 <Github size={24} />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/prasoon-dwivedi-0b470b311" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-white transition-colors duration-300 transform hover:scale-110"
               >
                 <Linkedin size={24} />
               </a>
-              <a 
-                href="mailto:prasoon.dwivedi@example.com"
+              {/* <a 
+                href="mailto:prasoon.dwivedi930@gmail.com"
                 className="text-slate-400 hover:text-white transition-colors duration-300 transform hover:scale-110"
               >
                 <Mail size={24} />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

@@ -16,15 +16,64 @@ const Contact = () => {
   });
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Simulate form submission
-    toast({
-      title: "Message sent successfully!",
-      description: "Thank you for your message. I'll get back to you soon.",
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   // Simulate form submission
+  //   toast({
+  //     title: "Message sent successfully!",
+  //     description: "Thank you for your message. I'll get back to you soon.",
+  //   });
+  //   setFormData({ name: '', email: '', subject: '', message: '' });
+  // };
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  
+  // Create a new FormData object
+  const submissionData = new FormData();
+  
+  // Add your Web3Forms Access Key
+  submissionData.append("access_key", "55bac7af-b9f5-4efa-8a5d-d1125e643561"); 
+  
+  // Add your form fields
+  submissionData.append("name", formData.name);
+  submissionData.append("email", formData.email);
+  submissionData.append("subject", formData.subject);
+  submissionData.append("message", formData.message);
+
+  try {
+    // Send the data to Web3Forms
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: submissionData
     });
-    setFormData({ name: '', email: '', subject: '', message: '' });
-  };
+
+    const result = await response.json();
+
+    if (result.success) {
+      // If it works, show the success toast
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for your message. I'll get back to you soon.",
+      });
+      // Clear the form
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } else {
+      // If Web3Forms rejects it
+      toast({
+        title: "Something went wrong.",
+        description: "Please try again later.",
+        variant: "destructive", // Assuming you have an error style configured
+      });
+    }
+  } catch (error) {
+    console.error("Form submission error:", error);
+    toast({
+      title: "Connection error.",
+      description: "Could not send the message. Please check your internet.",
+      variant: "destructive",
+    });
+  }
+};
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
@@ -54,7 +103,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p className="text-slate-300">prasoon.dwivedi@example.com</p>
+                    <p className="text-slate-300">prasoon.dwivedi884@gmail.com</p>
                   </div>
                 </div>
               </CardContent>
@@ -68,7 +117,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold">Phone</h3>
-                    <p className="text-slate-300">+1 (555) 123-4567</p>
+                    <p className="text-slate-300">+91 8840-939-473</p>
                   </div>
                 </div>
               </CardContent>
@@ -82,7 +131,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold">Location</h3>
-                    <p className="text-slate-300">San Francisco, CA</p>
+                    <p className="text-slate-300">Prayagraj, Uttar Pradesh</p>
                   </div>
                 </div>
               </CardContent>
@@ -90,11 +139,11 @@ const Contact = () => {
 
             <div className="text-center lg:text-left">
               <p className="text-slate-300 mb-4">
-                Available for freelance projects and full-time opportunities.
+                Available for full-time opportunities.
               </p>
               <div className="inline-flex items-center px-4 py-2 bg-green-600/20 rounded-full">
                 <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
-                <span className="text-green-400 text-sm font-medium">Available for hire</span>
+                <span className="text-green-400 text-sm font-medium">Open to Opportunities</span>
               </div>
             </div>
           </div>
