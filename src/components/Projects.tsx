@@ -140,10 +140,16 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card
-              key={index}
-              className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg overflow-hidden"
-            >
+            // <Card
+            //   key={index}
+            //   className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg overflow-hidden"
+            // >
+            <Card 
+  key={index} 
+  className={`group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg overflow-hidden ${
+    projects.length === 4 && index === 3 ? "lg:col-start-2" : ""
+  }`}
+>
               <div className="relative overflow-hidden">
                 <img
                   src={project.image}
