@@ -12,24 +12,6 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "ShopX - E-commerce Platform",
-      description:
-        "A full-stack e-commerce platform featuring a user-facing storefront, secure JWT authentication, cart management, and a dedicated admin dashboard for inventory control.",
-      image:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      technologies: ["React", "Node.js", "Express", "MongoDB", "JWT", "Multer"],
-      features: [
-        "Secure user authentication (JWT)",
-        "Dynamic shopping cart",
-        "Admin inventory dashboard",
-        "Product image uploads",
-        "Category filtering",
-      ],
-      github: "https://github.com/Prasoon-dwivedi88/ShopX",
-      demo: "https://shop-x-vrhp.vercel.app/",
-      category: "Full Stack",
-    },
-    {
       title: "Resumind - AI Resume Analyzer",
       description:
         "An AI-powered full-stack application that evaluates resumes against job descriptions, providing instant ATS scoring and granular feedback on tone, structure, and skills.",
@@ -80,6 +62,24 @@ const Projects = () => {
       category: "Full Stack",
     },
     {
+      title: "CarePulse - Healthcare Management System",
+      description:
+        "A full-stack healthcare platform featuring complex patient registration, appointment scheduling, a secure passkey-protected admin dashboard, and automated SMS notifications.",
+      image:
+        "https://images.unsplash.com/photo-1576091160550-2173ff9e5952?w=600&h=400&fit=crop",
+      technologies: ["Next.js", "TypeScript", "Appwrite", "Tailwind CSS", "Zod", "Twilio"],
+      features: [
+        "Complex patient onboarding workflows",
+        "Secure appointment scheduling",
+        "Passkey-protected admin dashboard",
+        "Automated SMS status notifications",
+        "ID document file uploads"
+      ],
+      github: "https://github.com/Prasoon-dwivedi88/CarePulse",
+      demo: "https://care-pulse-topaz-psi.vercel.app/",
+      category: "Full Stack",
+    },
+    {
       title: "Eleven Dev Hub - Deployment Platform",
       description:
         "A full-stack DevOps platform for deploying static sites and backend services directly from GitHub. Features automated CI/CD pipelines, real-time logging, and an AI-powered build error assistant.",
@@ -103,26 +103,7 @@ const Projects = () => {
       github: "https://github.com/Nikhil-Yadav15/ElevenDevHub",
       category: "Full Stack / DevOps",
     },
-    // {
-    //   title: 'DataViz Dashboard',
-    //   description: 'Interactive data visualization dashboard with real-time charts and customizable widgets.',
-    //   image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
-    //   technologies: ['React', 'D3.js', 'TypeScript', 'WebSocket', 'Material-UI'],
-    //   features: ['Real-time data', 'Interactive charts', 'Custom widgets', 'Export functionality'],
-    //   github: 'https://github.com',
-    //   demo: 'https://dashboard.example.com',
-    //   category: 'Frontend'
-    // },
-    // {
-    //   title: 'CloudSync - File Storage',
-    //   description: 'Secure cloud file storage service with file sharing, versioning, and collaboration tools.',
-    //   image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&h=400&fit=crop',
-    //   technologies: ['Vue.js', 'Python', 'Django', 'AWS S3', 'PostgreSQL'],
-    //   features: ['File encryption', 'Version control', 'Collaborative editing', 'Access controls'],
-    //   github: 'https://github.com',
-    //   demo: 'https://cloudsync.example.com',
-    //   category: 'Full Stack'
-    // }
+    
   ];
 
   return (
